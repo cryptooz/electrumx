@@ -1646,7 +1646,24 @@ class Blackcoin(ScryptMixin, Coin):
     RPC_PORT = 15715
     REORG_LIMIT = 5000
 
+    
+class Audiocoin(ScryptMixin, Coin):
+    NAME = "Audiocoin"
+    SHORTNAME = "ADC"
+    NET = "mainnet"
+    P2PKH_VERBYTE = bytes.fromhex("17")
+    P2SH_VERBYTES = (bytes.fromhex("7D"),)
+    WIF_BYTE = bytes.fromhex("97")
+    GENESIS_HASH = ('000003d9347a2ed183e9167c5e3d6932'
+                    '530886401bd7769b991c40e6962f85d6')
+    DAEMON = daemon.LegacyRPCDaemon
+    TX_COUNT = 4594999
+    TX_COUNT_HEIGHT = 1667070
+    TX_PER_BLOCK = 3
+    RPC_PORT = 26159
+    REORG_LIMIT = 5000
 
+    
 class Bitbay(ScryptMixin, Coin):
     NAME = "Bitbay"
     SHORTNAME = "BAY"
